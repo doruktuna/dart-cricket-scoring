@@ -1,0 +1,92 @@
+/* Score sheet */
+.score-row {
+  display: flex;
+  justify-content: center;
+  line-height: 0;
+}
+
+.player-cell {
+  width: 150px;
+}
+
+.player-cell.current-player {
+  color: red;
+}
+
+.shot-cell {
+  width: 50px;
+  height: 100%;
+}
+
+.player-cell,
+.shot-cell {
+  position: relative;
+  display: inline-block;
+  border-right: 2px black solid;
+  border-bottom: 2px black solid;
+  font-size: 2rem;
+  height: 3rem;
+  text-align: center;
+  padding: 5px;
+}
+
+.player-cell.no-bottom-border,
+.shot-cell.no-bottom-border {
+  border-bottom: 2px transparent solid;
+}
+
+.player-cell.no-right-border,
+.shot-cell.no-right-border {
+  border-right: 2px transparent solid;
+}
+
+.score-sheet img,
+.score-sheet pre {
+  height: 75%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.score-sheet img {
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.score-sheet pre {
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 1300px) {
+  .player-cell {
+    width: 10vw;
+  }
+
+  .shot-cell {
+    width: 5vw;
+  }
+
+  .player-cell,
+  .shot-cell {
+    font-size: 2vw;
+    height: 3vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .player-cell {
+    width: 70px;
+  }
+
+  .shot-cell {
+    width: 30px;
+  }
+
+  .player-cell,
+  .shot-cell {
+    font-size: 1rem;
+    height: 1.5rem;
+  }
+}
